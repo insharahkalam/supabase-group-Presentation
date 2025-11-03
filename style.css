@@ -5,9 +5,10 @@
     padding: 0%;
 }
 
-/* html, body {
+html,
+body {
     overflow: hidden;
-} */
+}
 
 body {
     background: linear-gradient(to top, #A020F0, #4B6CFB);
@@ -20,12 +21,12 @@ body {
 }
 
 #container {
-  background: url(00-\ BACKGROUND-IMAGE.jpg) no-repeat center center;
-  border-radius: 15px;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 80%;
-  height: 90%;
-  overflow: hidden;
-  box-shadow: 7px 30px 60px black;
+    background: url(00-\ BACKGROUND-IMAGE.jpg) no-repeat center center;
+    border-radius: 15px;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    box-shadow: 7px 30px 60px black;
 }
