@@ -24,10 +24,21 @@ async function signUp(e){
         })
      return
     };
+    
+
+if (sPhn.value.length !== 11) {
+    Swal.fire({
+        title: "Incorrect Phone Number!",
+        text: "Phone number must be exactly 11 digits.",
+        icon: "warning"
+    });
+    return;
+}
+
 
     try {
 
-   
+  
        
         const { data, error } = await supaBase.auth.signUp(
   {
