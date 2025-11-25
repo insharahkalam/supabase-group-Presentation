@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#0a1a2f] text-gray-200">
+
+    <!-- NAVBAR -->
+    <nav class="w-full bg-[#0f1f38] border-b border-blue-900/40">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between px-12 py-4">
+            <a href="#" class="flex items-center">
+                <img src="/images/logo.png" class="h-12" alt="Logo" />
+            </a>
+            <button data-cpxollapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-200 hover:bg-blue-800/40 focus:outline-none"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col md:flex-row gap-9 p-4 md:p-0 bg-[#0f1f38] md:bg-transparent rounded-lg">
+                    <li><a href="home.html" class="text-gray-200 text-lg hover:text-blue-400 font-semibold">Home</a>
+                    </li>
+                    <li><a href="about.html" class="text-gray-200 text-lg hover:text-blue-400 font-semibold">About</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-gray-200 text-lg hover:text-blue-400 font-semibold">Contact</a></li>
+                    <li><a href="create-ticket.html"
+                            class="text-[#FC4A30] text-lg hover:text-blue-400 font-semibold">Create Ticket</a>
+                    </li>
+                    <li><a href="#" class="text-gray-200 text-lg hover:text-blue-400 font-semibold">My Tickets</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="py-10 px-4 bg-[#0a1a2f] text-gray-200">
+        <div class="max-w-2xl mx-auto bg-[#10243f] p-8 rounded-3xl shadow-xl border border-blue-800/40">
+
+            <!-- Heading -->
+            <h2 class="text-3xl text-center font-bold text-white mb-6">
+                Create a <span class="text-[#FC4A30]">New Ticket</span>
+            </h2>
+
+            <!-- Title -->
+            <label class="text-lg font-semibold">Title</label>
+            <input type="text" placeholder="Enter ticket title" class="w-full mt-2 mb-4 p-3 bg-[#0f1f38] border border-blue-800/40 rounded-full 
+            focus:ring-2 focus:ring-[#FC4A30] outline-none text-gray-200">
+
+            <!-- Description -->
+            <label class="text-lg font-semibold">Description</label>
+            <textarea rows="3" placeholder="Describe your issue" class="w-full mt-2 mb-4 p-3 bg-[#0f1f38] border border-blue-800/40 rounded-2xl 
+            focus:ring-2 focus:ring-[#FC4A30] outline-none text-gray-200"></textarea>
+
+            <!-- Priority -->
+            <label class="text-lg font-semibold mb-2 block">Priority</label>
+            <div class="flex gap-5 mb-5">
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="priority" class="w-4 h-4 accent-[#FC4A30]">
+                    <span class="text-sm">High</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="priority" class="w-4 h-4 accent-[#FC4A30]">
+                    <span class="text-sm">Medium</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="priority" class="w-4 h-4 accent-[#FC4A30]">
+                    <span class="text-sm">Low</span>
+                </label>
+            </div>
+
+            <!-- Issue Type -->
+            <label class="text-lg font-semibold">Issue Type</label>
+            <select class="w-full mt-2 mb-5 p-3 bg-[#0f1f38] border border-blue-800/40 rounded-xl 
+            text-gray-200 focus:ring-2 focus:ring-[#FC4A30] outline-none">
+                <option>Select issue type</option>
+                <option>Technical Issue</option>
+                <option>Billing Issue</option>
+                <option>Network Issue</option>
+                <option>Service Issue</option>
+                <option>Other</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button class="w-full bg-[#FC4A30] hover:bg-orange-600 text-white text-lg font-semibold 
+            py-3 rounded-full shadow-md duration-300">
+                Submit Ticket
+            </button>
+
+        </div>
+    </section>
+
+
+    <footer class="bg-[#0f1f38] border-t px-12 border-blue-900/40 ">
+        <div class="w-full max-w-screen-xl mx-auto md:py-10">
+
+            <div class="sm:flex sm:items-center sm:justify-between">
+
+                <a href="#" class="flex items-center mb-6 sm:mb-0">
+                    <img src="/images/logo.png" class="h-14" alt="Ticket Manager Logo" />
+                </a>
+
+                <ul class="flex flex-wrap items-center gap-6 text-sm font-medium text-gray-300">
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">About</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Help Center</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Contact</a></li>
+                </ul>
+            </div>
+            <hr class="my-6 border-blue-900/40" />
+            <span class="block text-lg tracking-wide text-gray-400 text-center">
+                © 2025 Ticket Manager. All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
