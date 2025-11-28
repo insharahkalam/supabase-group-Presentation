@@ -325,6 +325,9 @@ h1 {
     }
 }
 
+
+    /* Swal Customization */
+
 .glass-alert {
   backdrop-filter: blur(12px);
   border-radius: 20px;
