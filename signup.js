@@ -135,7 +135,7 @@ async function signUp(e) {
       })
         .then(async () => {
                             //  INSERT DATA IN "users" TABLE IN SUPABASE
-                            
+
           const {error} = await supaBase 
           .from("users")
           .insert({
@@ -148,7 +148,7 @@ async function signUp(e) {
         if (error){
           console.log (`Supabase Erorr ${error}`)
         }else{
-         console.log ("User data successfully inserted into 'users' table.")
+           alert("data insert successfully!!")
         }
 
 
