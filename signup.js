@@ -133,9 +133,23 @@ async function signUp(e) {
         }
 
       })
-        .then(() => {
+        .then(async () => {
+                            //  INSERT DATA IN "users" TABLE IN SUPABASE
+                            
+          const {error} = await supaBase 
+          .from("users")
+          .insert({
+            username :sUName.value,
+            email : sEmail.value,
+            phone : sPhn.value,
+          })                 
           location.href = "home.html"
         })
+        if (error){
+          console.log (`Supabase Erorr ${error}`)
+        }else{
+         console.log ("User data successfully inserted into 'users' table.")
+        }
 
 
     }
