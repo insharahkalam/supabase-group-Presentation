@@ -2,14 +2,14 @@ import supaBase from "./configration.js";
 
 let lEmail = document.getElementById("email");
 let lPass = document.getElementById("password");
-let lBtn = document.querySelector(".btn-primary");
+let lBtn = document.querySelector("#login-btn");
 
 
 //  pasword toggle button
 
 const togglePass = document.querySelector(".toggle-password")
-
-togglePass.addEventListener("click", () => {
+  function toggleIcon(){
+ 
     if (lPass.type === "password") {
         lPass.type = "text"
         togglePass.classList.remove("fa-eye-slash")
@@ -19,12 +19,14 @@ togglePass.addEventListener("click", () => {
         togglePass.classList.remove("fa-eye")
         togglePass.classList.add("fa-eye-slash")
     }
-})
+}
+
+ togglePass &&togglePass.addEventListener("click", toggleIcon)
 
 
 async function login(e) {
     e.preventDefault();
-
+   
     let email = lEmail.value.trim();
     let pass = lPass.value.trim();
 
@@ -223,3 +225,141 @@ async function login(e) {
 
 
 lBtn && lBtn.addEventListener("click", login);
+
+
+
+                        //    FORGET PASSWORD FUNCINALITY
+
+
+const resetBtn = document.getElementById("resetBtn");
+ const resEmail = document.getElementById("reset-email");
+
+
+async function reset(){
+
+    if (!resEmail.value) {
+        alert("Please enter an email");
+       return
+    }
+   
+  
+    const { data, error } = await supaBase.auth.resetPasswordForEmail(resEmail.value, {
+        redirectTo: "https://azkaazeem.github.io/Login-page---Update-Password-page" 
+      
+    });
+
+    if (error) {
+        alert("Error: " + error.message);
+    } else {
+        alert("Reset link sent to your email!");
+    }
+};
+
+resetBtn && resetBtn.addEventListener("click", reset)
+
+
+
+
+
+
+
+// ADD UPDATE PASSWORD FUNCTIONALITY
+
+let newPassInp = document.getElementById("newPass");
+let conPassInp = document.getElementById("confirmPass");
+let ubdBtn = document.getElementById("updatePassBtn");
+
+async function newPass() {
+try {
+    
+
+
+    const { data, error } = await supaBase.auth.updateU
+    
+    
+    ser({
+        password: newPassInp.value
+    });
+
+    if (error) {
+    console.log(error.message);
+    
+    }else{
+        Swal.fire({
+                title: 'Success!',
+                text: 'Your password has been updated successfully. Redirecting to login...',
+                icon: 'success',
+                timer: 3000,
+                showConfirmButton: false
+            }).then(() => {
+                // User ko login page par bhej dein
+                location.href = 'https://azkaazeem.github.io/Login-page/'; // Isay apne login page ka URL dein
+            });
+    } 
+
+} catch (error) {
+    
+}
+
+
+} 
+
+ubdBtn.addEventListener ("click", newPass)
+
+
+
+
+
+
+
+
+
+
+
+// SHOW/HIDE PASSWORD TOGGLE
+
+
+
+// let toggles = document.querySelectorAll(".toggle-password");
+
+// toggles.forEach(toggle => {
+//     function toggIcon() {
+//         let id = toggle.getAttribute("data-target");
+//         let input = document.getElementById(id);
+
+//         if (input.type === "password") {
+//             input.type = "text";
+//             toggle.classList.replace("fa-eye-slash", "fa-eye");
+//         } else {
+//             input.type = "password";
+//             toggle.classList.replace("fa-eye", "fa-eye-slash");
+//         }
+
+//     }
+
+//     toggle && toggle.addEventListener("click", toggIcon)
+// }
+
+// )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
