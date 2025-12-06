@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#0a1a2f] text-gray-200">
+
+    <!-- NAVBAR -->
+    <nav class="w-full bg-[#0f1f38] border-b border-blue-900/40">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between px-12 py-4">
+            <a href="#" class="flex items-center">
+                <img src="/images/logo.png" class="h-12" alt="Logo" />
+            </a>
+            <button data-cpxollapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-200 hover:bg-blue-800/40 focus:outline-none"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col md:flex-row gap-9 p-4 md:p-0 bg-[#0f1f38] md:bg-transparent rounded-lg">
+                    <li><a href="home.html" class="text-[#FC4A30] text-lg hover:text-blue-400 font-semibold">Home</a>
+                    </li>
+                    <li><a href="about.html" class="text-gray-200 text-lg hover:text-blue-400 font-semibold">About</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-gray-200 text-lg hover:text-blue-400 font-semibold">Contact</a></li>
+                    <li><a href="create-ticket.html"
+                            class="text-gray-200 text-lg hover:text-blue-400 font-semibold">Create Ticket</a>
+                    </li>
+                    <li><a href="#" class="text-gray-200 text-lg hover:text-blue-400 font-semibold">My Tickets</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INTRO SECTION -->
+
+    <section class="py-20 px-6 md:px-12">
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-14">
+            <!-- LEFT SIDE -->
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    Manage & Report Issues
+                    <span class="text-[#FC4A30]">Effortlessly</span>
+                </h1>
+
+                <p class="text-lg md:text-2xl text-gray-300 leading-relaxed">
+                    Our Support Ticket Manager is designed to make reporting issues smoother, faster,
+                    and more reliable. Whether it’s a technical glitch, billing conflict, electricity
+                    fault, network outage, or account problem — submit your concern in seconds and
+                    track it with complete transparency.
+                </p>
+
+                <p class="text-md md:text-lg text-gray-400">
+                    A smarter, more organized way to solve problems — all in one place.
+                </p>
+            </div>
+
+            <!-- RIGHT SIDE IMAGE -->
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-xl overflow-hidden rounded-3xl 
+                border border-blue-500/20 shadow-2xl shadow-blue-900/40
+                bg-gradient-to-b from-blue-950/20 to-blue-900/10 p-2
+                transition-transform duration-500 hover:scale-[1.02]">
+
+                    <img src="https://cdn.prod.website-files.com/624fdc5e82dc83514cd9d166/644a4a223da8ac14bb26eb1a_ticket-managementhelpdesk.jpeg"
+                        alt="Ticket Manager Illustration"
+                        class="w-full h-[350px] md:h-[420px] object-cover rounded-2xl">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <hr class="my-6 border-blue-900/40" />
+    <!-- ISSUE CARDS HEADING -->
+    <section class="py-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">
+            Choose the <span class="text-[#FC4A30]">Type of Issue</span> You Want to Report
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <!-- Card Examples -->
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] group rounded-xl shadow-lg p-5 duration-500 hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://media.istockphoto.com/id/2083966639/photo/businessman-use-laptop-with-virtual-world-economic-growth-chart-with-red-warning-sign-for.jpg?s=612x612&w=0&k=20&c=dsJGUJB0au-y-SoBQPTEUj5elckxtkhZwXba5k_NTyc="
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Technical Issue
+                    </h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://media.istockphoto.com/id/1497099485/photo/sparks-explosion-between-electrical-cables-fire-hazard-concept.jpg?s=612x612&w=0&k=20&c=nV44joCsqmHwBFOFJDgqQiYRVy9Fbz_Ef3awmvgB2NE="
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Electricity
+                        Issue
+                    </h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group  hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://www.shutterstock.com/image-vector/3d-vector-payment-not-accepted-600nw-2354902423.jpg"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Billing Issue
+                    </h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://assets-eu-01.kc-usercontent.com/77bbf83a-1306-0152-fea5-3b5eaf937634/0ebab44e-7808-4cc3-8cb9-09eb524fb8e3/network-issues.jpg"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Network Issue
+                    </h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://online.rmcad.edu/student_user_guide/guides/troubleshooting/img/img_issues_login/error_account_login.jpg"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Account / Login
+                        Issue</h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHaX9-YcEv1EBXBtCmzemtZyCDOCnhtX43XA&s"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Security Issue
+                    </h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://www.onstro.com/wp-content/uploads/2024/06/5-Common-Customer-Problems-And-How-To-Solve-Them-blog-image.png"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Customer Support
+                        Issue</h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://www.shutterstock.com/image-vector/isometric-illustration-delivery-man-struggling-600nw-2640564215.jpg"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Service /
+                        Delivery
+                        Issue</h3>
+                </div>
+            </a>
+
+            <a href="create-ticket.html">
+                <div
+                    class="bg-[#10243f] rounded-xl shadow-lg p-5 duration-500 group hover:scale-105 transition cursor-pointer border border-blue-800/30">
+                    <img src="https://www.picpedia.org/highway-signs/images/other-issues.jpg"
+                        class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold text-center text-white group-hover:text-[#FC4A30]">Other issue</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <div class="w-full flex justify-center mt-5">
+        <a href="create-ticket.html">
+            <button type="button" class="text-white bg-[#10243f] hover:bg-[#FC4A30] duration-500 border border-blue-800/40 
+               shadow-lg shadow-blue-900/20 flex items-center gap-3 justify-center font-semibold rounded-full 
+               text-xl tracking-wide w-[300px] py-3 transition">
+                Create Ticket <i class="fa-solid fa-arrow-right"></i>
+            </button></a>
+    </div>
+
+    <!-- ============FOOTER============ -->
+
+    <footer class="bg-[#0f1f38] border-t px-12 border-blue-900/40 mt-16">
+        <div class="w-full max-w-screen-xl mx-auto md:py-10">
+
+            <div class="sm:flex sm:items-center sm:justify-between">
+
+                <a href="#" class="flex items-center mb-6 sm:mb-0">
+                    <img src="/images/logo.png" class="h-14" alt="Ticket Manager Logo" />
+                </a>
+
+                <ul class="flex flex-wrap items-center gap-6 text-sm font-medium text-gray-300">
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">About</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Help Center</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Contact</a></li>
+                </ul>
+            </div>
+            <hr class="my-6 border-blue-900/40" />
+            <span class="block text-lg tracking-wide text-gray-400 text-center">
+                © 2025 Ticket Manager. All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
