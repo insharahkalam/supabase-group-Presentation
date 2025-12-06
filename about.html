@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ticket Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="w-full bg-[#0f1f38] border-b border-blue-900/40">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between px-12 py-4">
+            <a href="#" class="flex items-center">
+                <img src="logo.png" class="h-12" alt="Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-200 hover:bg-blue-800/40 focus:outline-none"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col md:flex-row gap-9 p-4 md:p-0 bg-[#0f1f38] md:bg-transparent rounded-lg">
+    <li>
+        <a href="#" class="text-gray-200 text-lg font-semibold relative group">
+            Home
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="text-gray-200 text-lg font-semibold relative group">
+            About
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="text-gray-200 text-lg font-semibold relative group">
+            Contact
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="text-gray-200 text-lg font-semibold relative group">
+            Create Ticket
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="text-gray-200 text-lg font-semibold relative group">
+            My Tickets
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
+        </a>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <section class="bg-[#061225] text-gray-200 flex-1 px-6 md:px-16 py-16 border-t border-blue-900/30">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- PAGE TITLE -->
+            <div class="text-center mb-14" data-aos="fade-down">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-blue-400 tracking-wide font-montserrat">
+                    About Ticket Manager
+                </h1>
+                <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
+                    A streamlined platform designed to simplify task management, improve team coordination,
+                    and ensure every process is transparent and accountable.
+                </p>
+            </div>
+
+            <!-- INTRO CARD -->
+            <div class="bg-gradient-to-br from-[#0c1a33] to-[#071022] p-8 rounded-2xl border border-blue-900/40 shadow-xl mb-14"
+                 data-aos="fade-up">
+                <p class="text-lg leading-relaxed text-gray-300">
+                    Ticket Manager is a modern web solution designed to help organizations handle operational tasks,
+                    workflows, complaints, and support cases in a structured and trackable environment. 
+                    Every ticket remains documented, monitored, and resolved efficiently.
+                </p>
+            </div>
+
+            <!-- WHY SECTION -->
+            <h2 class="text-3xl font-bold text-blue-400 mb-6 tracking-wide" data-aos="fade-right">
+                Why Ticket Manager?
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-[#09182f] p-7 rounded-xl border border-blue-900/40 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="zoom-in">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Eliminates Chaos</h3>
+                    <p class="text-gray-400">
+                        Every task and ticket is recorded and traceable, removing confusion and lost communication.
+                    </p>
+                </div>
+                <div class="bg-[#09182f] p-7 rounded-xl border border-blue-900/40 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Clear Responsibility</h3>
+                    <p class="text-gray-400">
+                        Every ticket has an owner and timeline, making responsibility visible and manageable.
+                    </p>
+                </div>
+                <div class="bg-[#09182f] p-7 rounded-xl border border-blue-900/40 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Centralized Control</h3>
+                    <p class="text-gray-400">
+                        Teams collaborate in one unified system instead of scattered emails and spreadsheets.
+                    </p>
+                </div>
+                <div class="bg-[#09182f] p-7 rounded-xl border border-blue-900/40 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Trackable Records</h3>
+                    <p class="text-gray-400">
+                        History and logs remain available for audits, review, and future insights.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BENEFITS -->
+            <h2 class="text-3xl font-bold text-blue-400 mb-6 tracking-wide" data-aos="fade-right">
+                How Ticket Manager Helps
+            </h2>
+
+            <ul class="space-y-5 text-lg text-gray-300 mb-16 list-disc pl-6" data-aos="fade-up">
+                <li>Organizes tasks and requests by categories, priorities, and status.</li>
+                <li>Improves communication across teams and departments.</li>
+                <li>Reduces delays, oversight, and duplicated efforts.</li>
+                <li>Gives managers data to monitor performance and efficiency.</li>
+                <li>Enhances workflow transparency and saves valuable time.</li>
+            </ul>
+
+            <!-- PROJECT PURPOSE -->
+            <h2 class="text-3xl font-bold text-blue-400 mb-6 tracking-wide" data-aos="fade-right">
+                Project Objective
+            </h2>
+
+            <div class="bg-gradient-to-br from-[#0b1d3b] to-[#071019] p-8 rounded-2xl border border-blue-900/50 shadow-xl mb-20" data-aos="fade-up">
+                <p class="text-lg text-gray-300 leading-relaxed mb-2">
+                    This project was developed as part of a professional academic initiative, focusing on
+                    real-world process management, UI/UX development, backend logic, and database integration.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Ticket Manager demonstrates how enterprise-level tracking systems function from design
+                    to deployment, combining visual polish with technical depth.
+                </p>
+            </div>
+
+            <!-- TEAM SECTION -->
+            <h2 class="text-3xl font-bold text-blue-400 mb-8 tracking-wide text-center" data-aos="fade-down">
+                Meet the Team
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-[#0a1c35] p-7 rounded-xl border border-blue-900/40 shadow-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="flip-up">
+                    <img src="https://via.placeholder.com/120" class="w-28 h-28 rounded-full mx-auto mb-5 border-2 border-blue-600" />
+                    <h3 class="text-xl font-bold text-gray-100 mb-1">Member One</h3>
+                    <p class="text-gray-400 text-sm">Frontend Development</p>
+                </div>
+                <div class="bg-[#0a1c35] p-7 rounded-xl border border-blue-900/40 shadow-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="flip-up" data-aos-delay="150">
+                    <img src="https://via.placeholder.com/120" class="w-28 h-28 rounded-full mx-auto mb-5 border-2 border-blue-600" />
+                    <h3 class="text-xl font-bold text-gray-100 mb-1">Member Two</h3>
+                    <p class="text-gray-400 text-sm">Backend Development</p>
+                </div>
+                <div class="bg-[#0a1c35] p-7 rounded-xl border border-blue-900/40 shadow-xl text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40" data-aos="flip-up" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/120" class="w-28 h-28 rounded-full mx-auto mb-5 border-2 border-blue-600" />
+                    <h3 class="text-xl font-bold text-gray-100 mb-1">Member Three</h3>
+                    <p class="text-gray-400 text-sm">Database & Deployment</p>
+                </div>
+            </div>
+
+            <!-- CLOSING LINE -->
+            <p class="text-center mt-16 text-gray-400 text-lg" data-aos="fade-up">
+                Together, we built a complete Ticket Management System with modern design, robust features,
+                and real-world usability.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0f1f38] border-t px-8 border-blue-900/40 mt-0">
+        <div class="w-full max-w-screen-xl mx-auto p-6 md:py-10">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#" class="flex items-center mb-6 sm:mb-0">
+                    <img src="logo.png" class="h-14" alt="Ticket Manager Logo" />
+                </a>
+                <ul class="flex flex-wrap items-center gap-6 text-sm font-medium text-gray-300">
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">About</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Help Center</a></li>
+                    <li><a href="#" class="hover:text-blue-400 text-lg transition">Contact</a></li>
+                </ul>
+            </div>
+            <hr class="my-6 border-blue-900/40" />
+            <span class="block text-lg tracking-wide text-gray-400 text-center">
+                © 2025 Ticket Manager. All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            offset: 80,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
