@@ -6,36 +6,38 @@ const client = createClient(projectUrl, projectKey)
 console.log(createClient);
 console.log(client);
 
+
 // =======inserting form data=======
 
-const title = document.getElementById("title")
-const description = document.getElementById("description")
-const issue_type = document.getElementById("issue_type")
-const priority = document.getElementsByName("priority")
-const submitBtn = document.getElementById("submitBtn")
-let selectedPriority = "";
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const issue_type = document.getElementById("issue_type");
+const submitBtn = document.getElementById("submitBtn");
+
 submitBtn.addEventListener("click", async (e) => {
-    e.preventDefault()
-    for (let i = 0; i < priority.length; i++) {
-        console.log(priority[i].checked);
-        if (priority[i].checked) {
-            selectedPriority = priority[i].value;
-            break;
-        }
+    e.preventDefault();
+
+    // If any field empty
+    if (!title.value.trim() ||
+        !description.value.trim() ||
+        !issue_type.value.trim()) {
+
+        alert("Plzz fill all fields!!");
+        return; // stop further code
     }
 
+    // ===== Insert data =====
     const { error } = await client
         .from('Ticket_form')
-        .insert({ Title: title.value, Description: description.value, Priority: selectedPriority, Issue_type: issue_type.value })
+        .insert({
+            Title: title.value,
+            Description: description.value,
+            Issue_type: issue_type.value
+        });
 
     if (error) {
         console.log("data inserting error", error.message);
     } else {
-        alert("data insert successfully!!")
+        alert("data insert successfully!!");
     }
-
-
-
-})
-
-
+});
