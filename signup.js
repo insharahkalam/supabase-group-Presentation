@@ -1,4 +1,4 @@
-import supaBase from "./config.js";
+import client from "./config.js";
 
 
 let sUName = document.getElementById("name");
@@ -78,7 +78,7 @@ async function signUp(e) {
 
 
 
-    const { data, error } = await supaBase.auth.signUp(
+    const { data, error } = await client.auth.signUp(
       {
         email: sEmail.value,
         password: sPass.value,
@@ -112,7 +112,7 @@ async function signUp(e) {
         sEmail.value = "";
         sPass.value = "";
         sPhn.value = "";
-      
+
       })
       return;
 
@@ -131,25 +131,27 @@ async function signUp(e) {
         customClass: {
           popup: "glass-alert"
         }
-
       })
+      
         .then(async () => {
-                            //  INSERT DATA IN "users" TABLE IN SUPABASE
+          //  INSERT DATA IN "users" TABLE IN SUPABASE
 
-          const {error} = await supaBase 
-          .from("users")
-          .insert({
-            username :sUName.value,
-            email : sEmail.value,
-            phone : sPhn.value,
-          })                 
-          location.href = "home.html"
+          const { error } = await client
+            .from("users")
+            .insert({
+              username: sUName.value,
+              email: sEmail.value,
+              phone: sPhn.value,
+            })
+          // location.href = "home.html"
+          window.location.href = "login.html"
         })
-        if (error){
-          console.log (`Supabase Erorr ${error}`)
-        }else{
-           alert("data insert successfully!!")
-        }
+      if (error) {
+        console.log(`Supabase Erorr ${error}`)
+      } else {
+        console.log("data insert successsfully!");
+
+      }
 
 
     }
@@ -169,12 +171,12 @@ async function signUp(e) {
         popup: "glass-alert"
       }
     }).then(() => {
-        sUName.value = "";
-        sEmail.value = "";
-        sPass.value = "";
-        sPhn.value = "";
-      
-      })
+      sUName.value = "";
+      sEmail.value = "";
+      sPass.value = "";
+      sPhn.value = "";
+
+    })
   }
 }
 
