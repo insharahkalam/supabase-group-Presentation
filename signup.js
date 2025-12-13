@@ -125,7 +125,7 @@ async function signUp(e) {
         background: "#f9fbfc",
         color: "#003b46",
         confirmButtonColor: "#003b46",
-        confirmButtonText: "Go to Home",
+        confirmButtonText: "Go to Login",
         padding: "20px",
         borderRadius: "15px",
         customClass: {
