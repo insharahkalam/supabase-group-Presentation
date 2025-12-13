@@ -1,4 +1,4 @@
-import supaBase from "./configration.js";
+import client from "./configration.js";
 
 let lEmail = document.getElementById("email");
 let lPass = document.getElementById("password");
@@ -137,7 +137,7 @@ async function login(e) {
 
     try {
 
-        const { data, error } = await supaBase.auth.signInWithPassword({
+        const { data, error } = await client.auth.signInWithPassword({
             email: email,
             password: pass
         });
@@ -265,7 +265,7 @@ async function reset(e) {
     try {
 
 
-        const { data, error } = await supaBase.auth.resetPasswordForEmail(resEmail.value, {
+        const { data, error } = await client.auth.resetPasswordForEmail(resEmail.value, {
             redirectTo: "https://azkaazeem.github.io/Login-page---Update-Password-page"
 
         });
@@ -399,7 +399,7 @@ async function newPass(e) {
 
     try {
 
-        const { data, error } = await supaBase.auth.updateUser({
+        const { data, error } = await client.auth.updateUser({
             password: newPassInp.value
         });
 
